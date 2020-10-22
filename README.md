@@ -15,7 +15,7 @@
 
   ``git --version.``
 
-  ![git --version](https://fajars.space/ngampus/pemrograman/git/img/1.png)
+  ![git --version](gambar/gambar2.png)
 
 # Menambahkan Global Config
 * Pada saat pertama kali menggunakan git, perlu dilakukan konfigurasi
@@ -30,29 +30,25 @@ kegagalan saat menjalankan perintah ```git commit```
 
   ``$ git config --global user.email "nama_user"``
 
-# Perintah Dasar Git
-* ``git init`` , perintah untuk membuat repository local
-* ``git add``, perintah untuk menambahkan file baru, atau perubahan pada file
-pada staging sebelum proses commit.
-* ``git commit``, perintah untuk menyimpan perubahan kedalam database git.
-* ``git push -u origin master``, perintah untuk mengirim perubahan pada repository local menuju server repository.
-* ``git clone [url]``, perintah untuk membuat working directory yang diambil dari repositry sever.
-* ``git remote add origin [url]``, perintah untuk menambahkan remote server/reopsitory server pada local repositry (working directory)
-* ``git pull``, perintah untuk mengambil/mendownload perubahan terbaru dari server repository ke local repository
+  ![gambar3](gambar/gambar3.png)
 
 # Membuat Reposiory Local
-* Buka direktory aktif, misal: '/Desktop/belajar-git'
+* Buka direktory aktif, misal: 'c/Users/ADITYA BANI ISRO/tugasbani'
 * Drop direktori ke terminal / CMD
-* Buat direktory project praktikum pertama dengan nama latihan1
+* Buat direktory project praktikum pertama dengan nama tugasbani
 
-  ``$ mkdir latihan1``
+  ``$ mkdir tugasbani``
 
-  ``$ cd latihan1``
+  ``$ cd tugasbani``
+
+  ![gambar5](gambar/gambar5.PNG)
 
 * Sehingga terbentuk satu direktori baru dibawahnya, selanjutnya masuk kedalam direktori tersebut dengan perintah cd (change directory)
-* direktory aktif menjadi: /Desktop/belajar-git/latihan1
+* direktory aktif menjadi: C:/Users/ADITYA BANI ISRO/tugasbani/.
 * Jalankan perintah git init, untuk membuat repository local.
 ``$ git init``
+
+![gambar6](gambar/gambar6.PNG)
 * Repository baru berhasil di inisialisasi, dengan terbentuknya satu direktori hidden dengan nama .git
 * Pada direktori tersebut, semua perubahan pada working directory akan disimpan.
 
@@ -60,11 +56,13 @@ pada staging sebelum proses commit.
 * Untuk membuat file dapat menggunakan text editor, lalu menyimpan filenya pada direktori aktif (repository)
 * disini kita akan coba buat satu file bernama README.md (text file)
 
-  ``$ echo “# Latihan 1” >> README.md``
+  ``$ echo “file pertama” >> README.md``
+
+  ![gambar7](gambar/gambar7.PNG)
 
 * File README.md berhasil dibuat.
 
-  ![readme.md created](https://fajars.space/ngampus/pemrograman/git/img/2.png)
+  ![gambar8](gambar/gambar8.PNG)
 
 # Menambahkan File baru pada repository
 * Untuk menambahkan file yang baru saja dibuat tersebut gunakan perintah git add.
@@ -72,36 +70,45 @@ pada staging sebelum proses commit.
   ``$ git add README.md``
 
 * File README.md berhasil ditambahkan.
+* Untuk mengecek nya gunakan perintah
 
-  ![readme.md add created](https://fajars.space/ngampus/pemrograman/git/img/3.png)
+  ``$ git status``
+
+
+  ![gambar9](gambar/gambar9.PNG)
 
 # Commit (Menyimpan perubahan ke database)
 * Untuk menyimpan perubahan yang ada kedalam database repository local, gunakan perintah
 
-  ``$ git commit -m 'File pertama saya'``
+  ``$ git commit -m 'Commit pertama'``
+* Untuk mengeceknya menggunakan Perintah
+
+  ``$ git status``
 
 * Perubahan berhasil disimpan.
 
-   ![commit pertama](https://fajars.space/ngampus/pemrograman/git/img/4.1.png)
+   ![gambar10](gambar/gambar10.PNG)
 
 # Membuat repository server
 * Server reopsitory yang akan kita gunakan adalah http://github.com, Anda harus membuat akun terlebih dahulu.
 * Pada laman github, klik tombol start a project, atau
 * Dari menu (icon +) klik New Repository
 
-  ![new repo](https://fajars.space/ngampus/pemrograman/git/img/5.png)
+  ![newrepository](gambar/gambar12.png)
 
 # Membuat repository server
-* Isi nama repository nya, misal: Latihan-git
+* Isi nama repository nya, misal: Latihan Bani
 * lalu klik tombol Create repository
 
-  ![create repo](https://fajars.space/ngampus/pemrograman/git/img/6.png)
+  ![buatrepository](gambar/gambar13.PNG)
 
 # Menambahkan Remote Repository
 * Remote Repository merupakan repository server yang akan digunakan untuk menyimpan setiap perubahan pada local repository, sehingga dapat diakses oleh banyak user.
 * Untuk menambahkan remote repository server, gunakan perintah git remote add origin [url]
 
-  ``$ git remote add origin https://github.com/fajarbaiz/latihan-git.git``
+  ``$ git remote add origin https://github.com/Aditya-Bani/Latihan-Bani.git``
+
+![gambar14](gambar/gambar14.PNG)
 
 # Push (Mengirim perubahan ke server)
 * Untuk mengirim perubahan pada local repository ke server gunakan perintah git push.
@@ -110,18 +117,18 @@ pada staging sebelum proses commit.
 
 * Perintah ini akan meminta memasukkan username dan password pada akun github.com
 
-  ![push](https://fajars.space/ngampus/pemrograman/git/img/7.png)
+  ![gambar15](gambar/gambar15.PNG)
 
 # Lihat hasilnya pada server repository
 * Buka laman github.com, arahkan pada repositori- nya.
 * Maka perubahan akan terlihat pada laman tersebut.
 
-  ![rexona percaya](https://fajars.space/ngampus/pemrograman/git/img/8.png)
+  ![gambar16](gambar/gambar16.PNG)
 
 # Clone Repository
 * Clone repository, pada dasarnya adalah meng-copy repository server dan secara otomatis membuat satu direktory sesuai dengan nama repositorynya (working directory).
 * Untuk melakukan cloning, gunakan perintah git clone [url]
 
-  ``git clone https://github.com/fajarbaiz/latihan-git.git``
+  ``$ git clone https://github.com/Aditya-Bani/Latihan-Bani.git``
 
-  ![clone](https://fajars.space/ngampus/pemrograman/git/img/9.png)
+  ![gambar18](gambar/gambar18.PNG)
